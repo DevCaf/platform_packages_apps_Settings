@@ -55,8 +55,7 @@ public class DeviceInfoSettings extends SettingsPreferenceFragment implements In
 
     private static final String LOG_TAG = "DeviceInfoSettings";
 
-    private static final String KEY_MANUAL = "manual";
-    private static final String KEY_REGULATORY_INFO = "regulatory_info";
+
     private static final String PROPERTY_SELINUX_STATUS = "ro.build.selinux";
     private static final String KEY_KERNEL_VERSION = "kernel_version";
     private static final String KEY_BUILD_NUMBER = "build_number";
@@ -192,24 +191,6 @@ public class DeviceInfoSettings extends SettingsPreferenceFragment implements In
          * Settings is a generic app and should not contain any device-specific
          * info.
          */
-        // Remove manual entry if none present.
-        removePreferenceIfBoolFalse(KEY_MANUAL, R.bool.config_show_manual);
-
-        // Remove regulatory information if none present or config_show_regulatory_info is disabled
-        final Intent intent = new Intent(Settings.ACTION_SHOW_REGULATORY_INFO);
-        if (getPackageManager().queryIntentActivities(intent, 0).isEmpty()
-                || !getResources().getBoolean(R.bool.config_show_regulatory_info)) {
-            Preference pref = findPreference(KEY_REGULATORY_INFO);
-            if (pref != null) {
-                getPreferenceScreen().removePreference(pref);
-            }
-        }
-        // Remove regulatory labels if no activity present to handle intent.
-        removePreferenceIfActivityMissing(
-                KEY_REGULATORY_INFO, Settings.ACTION_SHOW_REGULATORY_INFO);
-
-        removePreferenceIfActivityMissing(
-                "safety_info", "android.settings.SHOW_SAFETY_AND_REGULATORY_INFO");
     }
 
     @Override
