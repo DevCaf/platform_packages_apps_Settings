@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-    Copyright (c) 2016 Project Substratum
+    Copyright (c) 2017 Project Substratum
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
@@ -73,4 +73,5 @@
     <color name="text_color_black">@android:color/black</color>
     <color name="text_color_white">@android:color/white</color>
     <color name="background_color_white">@android:color/white</color>
+
 </resources>
