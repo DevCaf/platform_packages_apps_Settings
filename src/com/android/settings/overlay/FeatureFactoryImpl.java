@@ -25,7 +25,8 @@ import com.android.settings.fuelgauge.PowerUsageFeatureProvider;
 /**
  * {@link FeatureFactory} implementation for AOSP Settings.
  */
-public final class FeatureFactoryImpl extends FeatureFactory {
+@Keep
+public class FeatureFactoryImpl extends FeatureFactory {
 
     private SuggestionFeatureProvider mSuggestionFeatureProvider;
 
