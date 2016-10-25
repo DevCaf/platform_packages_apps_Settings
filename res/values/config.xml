@@ -44,7 +44,7 @@
     <!-- Config voice over lte in wireless settings end -->
 
     <!-- When true enable color temperature setting. -->
-    <bool name="config_enableColorTemperature">false</bool>
+    <bool name="config_enableColorTemperature">true</bool>
 
     <!-- carrier tethering default ssid and password begin -->
     <bool name="use_empty_password_default">false</bool>
