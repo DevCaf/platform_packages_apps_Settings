@@ -76,6 +76,8 @@ public class DeviceInfoSettings extends SettingsPreferenceFragment implements In
     private static final String MBN_VERSION_PATH = "/persist/speccfg/mbnversion";
     private static final String QGP_VERSION_PATH = "/persist/speccfg/devicetype";
     private static final String KEY_MOD_BUILD_DATE = "build_date";
+    private static final String KEY_MOD_BUILD_COMPILER_GCC = "build_compiler_gcc";
+    private static final String KEY_MOD_BUILD_COMPILER_CLANG = "build_compiler_clang";
     private static final String KEY_VENDOR_VERSION = "vendor_version";
 
     static final int TAPS_TO_BE_A_DEVELOPER = 7;
@@ -153,6 +155,8 @@ public class DeviceInfoSettings extends SettingsPreferenceFragment implements In
         }
         findPreference(KEY_KERNEL_VERSION).setSummary(DeviceInfoUtils.getFormattedKernelVersion());
         setValueSummary(KEY_MOD_BUILD_DATE, "ro.build.date");
+        setValueSummary(KEY_MOD_BUILD_COMPILER_GCC, "ro.build.uber.gcc");
+        setValueSummary(KEY_MOD_BUILD_COMPILER_CLANG, "ro.build.uber.clang");
 
         if (!SELinux.isSELinuxEnabled()) {
             String status = getResources().getString(R.string.selinux_status_disabled);
