@@ -244,6 +244,8 @@ public class SettingsActivity extends SettingsDrawerActivity
     private static final String PROFILEMGR_MAIN_FRAGMENT = "com.android.settings.ProfileMgrMain";
     private static final String MOBILENETWORK_FRAGMENT = "com.android.settings.MobileNetworkMain";
     private static final String SYSTEM_UPDATE = "android.settings.SystemUpdateActivity";
+    private static final String MAGISK_FRAGMENT = "com.android.settings.MagiskManager";
+
     private static final String SUPERSU_FRAGMENT = "com.android.settings.SuperSU";
 
     private static final String SUBSTRATUM_FRAGMENT = "com.android.settings.Substratum";
@@ -1115,6 +1117,14 @@ public class SettingsActivity extends SettingsDrawerActivity
             return null;
         }
 
+        if (MAGISK_FRAGMENT.equals(fragmentName)) {
+            Intent magiskIntent = new Intent();
+            magiskIntent.setClassName("com.topjohnwu.magisk", "com.topjohnwu.magisk.SplashActivity");
+            startActivity(magiskIntent);
+            finish();
+            return null;
+        }
+
         if (SUPERSU_FRAGMENT.equals(fragmentName)) {
             Intent superSUIntent = new Intent();
             superSUIntent.setClassName("eu.chainfire.supersu", "eu.chainfire.supersu.MainActivity");
@@ -1312,6 +1322,16 @@ public class SettingsActivity extends SettingsDrawerActivity
         setTileEnabled(new ComponentName(packageName,
                         Settings.DevelopmentSettingsActivity.class.getName()),
                 showDev, isAdmin, pm);
+
+        // Magisk Manager
+        boolean magiskSupported = false;
+        try {
+            magiskSupported = (getPackageManager().getPackageInfo("com.topjohnwu.magisk", 0).versionCode > 0);
+        } catch (PackageManager.NameNotFoundException e) {
+        }
+        setTileEnabled(new ComponentName(packageName,
+                        Settings.MagiskActivity.class.getName()),
+                magiskSupported, isAdmin, pm);
 
         // Embedding into Settings is supported from SuperSU v1.85 and up
         boolean suSupported = false;
