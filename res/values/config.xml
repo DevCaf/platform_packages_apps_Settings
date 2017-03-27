@@ -118,4 +118,17 @@
     <bool name="config_storage_manager_settings_enabled">true</bool>
 
     <bool name="usb_tethering_show_alert_for_turn_off_wifi">false</bool>
+    
+         <!-- Customize date format or not -->
+    <bool name="config_regional_date_format">false</bool>
+
+    <!-- Whether to show_kernel version name -->
+    <bool name="def_hide_kernel_version_name">false</bool>
+    
+    <!-- Whether to show a preference item for battery percentage
+        in ("Battery") for India RJIL -->
+    <bool name="config_show_battery_percentage">false</bool>
+
+    <!-- Config to enable/disable hotspot2 for RJIL-->
+    <bool name="config_wifi_hotspot2_enabled_Rel1">false</bool>
 </resources>

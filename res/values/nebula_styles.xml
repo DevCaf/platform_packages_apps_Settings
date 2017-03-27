@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!--
-     Copyright (C) 2017 Project Substratum
+<!-- Copyright (C) 2017 The Pure Nexus Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -14,7 +13,6 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
-
 <resources>
     <style name="Theme.DateTimeSettingsSetupWizard" parent="@android:style/Theme.DeviceDefault.Light.NoActionBar" />
 
@@ -27,4 +25,19 @@
     <style name="Theme.SettingsAlertDialog" parent="@*android:style/Theme.DeviceDefault.Light.Dialog.Alert" />
 
     <style name="Theme.VoiceActivity" parent="@*android:style/Theme.DeviceDefault.Light.Voice" />
+
+    <!-- Night mode tile brightness value  -->
+    <string-array name="night_brightness_value_entries" translatable="false">
+        <item>@string/night_bright_disabled</item>
+        <item>@string/night_bright_min</item>
+        <item>@string/night_bright_low</item>
+        <item>@string/night_bright_medium</item>
+    </string-array>
+
+    <string-array name="night_brightness_value_values" translatable="false">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
 </resources>
