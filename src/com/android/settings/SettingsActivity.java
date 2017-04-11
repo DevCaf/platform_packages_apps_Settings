@@ -1323,6 +1323,16 @@ public class SettingsActivity extends SettingsDrawerActivity
                         Settings.DevelopmentSettingsActivity.class.getName()),
                 showDev, isAdmin, pm);
 
+        // KernelAdiutor-Mod
+        boolean kamSupported = false;
+        try {
+            kamSupported = (getPackageManager().getPackageInfo("com.kerneladiutor.mod", 0).versionCode > 0);
+        } catch (PackageManager.NameNotFoundException e) {
+        }
+        setTileEnabled(new ComponentName(packageName,
+                        Settings.PerformanceSettingsActivity.class.getName()),
+                kamSupported, isAdmin, pm);
+
         // Magisk Manager
         boolean magiskSupported = false;
         try {
