@@ -16,22 +16,6 @@
  -->
 <resources>
 
-    <!-- update notifications -->
-    <string-array name="update_entries">
-        <item>@string/gplus_collection</item>
-    </string-array>
-
-    <!-- social media -->
-    <string-array name="social_entries">
-        <item>@string/gplus_community</item>
-        <item>@string/xda</item>
-    </string-array>
-
-    <!-- spezi profiles -->
-    <string-array name="spz_entries">
-        <item>@string/xda</item>
-    </string-array>
-
     <!-- Names of categories of app ops tabs -->
     <string-array name="app_ops_categories_nitrogen" translatable="false">
         <item>@string/app_ops_cat_location</item>
