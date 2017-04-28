@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Copyright (C) 2017 The PixelDust Project
+<!-- Copyright (C) 2017 The Nebula Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -42,7 +42,7 @@
 
     <!-- Main list strings -->
     <string name="pd_category_title">Custom</string>
-    <string name="pd_title">Pixel Dust Settings</string>
+    <string name="pd_title">Nebula Settings</string>
     <string name="pd_summary">ROM features &amp; customization</string>
 
     <string name="substratum_title">Substratum</string>
