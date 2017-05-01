@@ -79,6 +79,8 @@ public class DeviceInfoSettings extends SettingsPreferenceFragment implements In
     private static final String KEY_MOD_BUILD_COMPILER_GCC = "build_compiler_gcc";
     private static final String KEY_MOD_BUILD_COMPILER_CLANG = "build_compiler_clang";
     private static final String KEY_VENDOR_VERSION = "vendor_version";
+    private static final String KEY_NEBULA_CHANGELOG = "nebula_changelog";
+    private static final String KEY_NEBULA_LOGO = "ic_settings_nebula";
 
     static final int TAPS_TO_BE_A_DEVELOPER = 7;
 
@@ -157,6 +159,8 @@ public class DeviceInfoSettings extends SettingsPreferenceFragment implements In
         setValueSummary(KEY_MOD_BUILD_DATE, "ro.build.date");
         setValueSummary(KEY_MOD_BUILD_COMPILER_GCC, "ro.build.uber.gcc");
         setValueSummary(KEY_MOD_BUILD_COMPILER_CLANG, "ro.build.uber.clang");
+        findPreference(KEY_NEBULA_CHANGELOG).setEnabled(true);
+        findPreference(KEY_NEBULA_LOGO).setEnabled(true);
 
         if (!SELinux.isSELinuxEnabled()) {
             String status = getResources().getString(R.string.selinux_status_disabled);

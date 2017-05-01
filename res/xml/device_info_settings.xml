@@ -18,6 +18,16 @@
         xmlns:settings="http://schemas.android.com/apk/res-auto"
         android:title="@string/about_settings">
 
+        <!-- Nebula Logo Header -->
+        <PreferenceScreen android:key="ic_settings_nebula"
+            android:layout="@layout/ic_settings_nebula" />
+
+        <!-- Changelog -->
+        <PreferenceScreen android:key="nebula_changelog"
+            android:title="@string/changelog_title"
+            android:summary="@string/changelog_summary"
+            android:fragment="com.android.settings.nebula.Changelog" />
+
         <!-- Device status - launches activity -->
         <PreferenceScreen android:key="status_info"
                 android:title="@string/device_status"
