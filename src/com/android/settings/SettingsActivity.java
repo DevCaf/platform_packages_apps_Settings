@@ -126,7 +126,6 @@ import com.android.settings.search.Index;
 import com.android.settings.sim.SimSettings;
 import com.android.settings.tts.TextToSpeechSettings;
 import com.android.settings.users.UserSettings;
-import com.android.settings.nebula.AmbientSettings;
 import com.android.settings.vpn2.VpnSettings;
 import com.android.settings.wfd.WifiDisplaySettings;
 import com.android.settings.widget.SwitchBar;
@@ -399,7 +398,6 @@ public class SettingsActivity extends SettingsDrawerActivity
             AutomaticStorageManagerSettings.class.getName(),
             ButtonsSettings.class.getName(),
             NebulaSettings.class.getName()
-            AmbientSettings.class.getName(),
     };
 
 

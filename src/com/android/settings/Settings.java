@@ -174,5 +174,4 @@ public class Settings extends SettingsActivity {
     public static class SystemSettings extends SettingsActivity { /* empty */ }
 
     public static class ButtonsSettingsActivity extends SettingsActivity { /* empty */ }
-    public static class AmbientSettingsActivity extends SettingsActivity { /* empty */ }
 }
