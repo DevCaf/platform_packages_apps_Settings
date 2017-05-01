@@ -47,8 +47,36 @@
 
     <!-- Main list strings -->
     <string name="pd_category_title">Custom</string>
-    <string name="pd_title">Pixel Dust Settings</string>
+    <string name="pd_title">Nebula Settings</string>
     <string name="pd_summary">ROM features &amp; customization</string>
+    <!-- Nebula About -->
+    <string name="nebula_about">Nebula ROM info</string>
+    <string name="nebula_about_summary">Updates, useful links, developers and contributors</string>
+    <string name="nebula_useful">Useful links</string>
+    <!-- update notifications -->
+    <string name="nebula_updates">Nebula ROM update notifications</string>
+    <string name="update_dialog">Pick your notification service</string>
+    <string name="gplus_collection">Google+ collection</string>
+    <!-- social media -->
+    <string name="nebula_social">Nebula ROM on social media</string>
+    <string name="social_dialog">Follow Nebula ROM on social media</string>
+    <string name="gplus_community">Google+ community</string>
+    <!-- github -->
+    <string name="nebula_github">Nebula Project GitHub Source</string>
+    <!-- donations -->
+    <string name="nebula_donate">Donate to support development</string>
+    <!-- developer/contributors -->
+    <string name="lead_dev">Lead Developer</string>
+    <string name="contributors">Team members</string>
+    <!-- eliminater74 -->
+    <string name="elim">Eliminater74</string>
+    <string name="elim_sum">Nebula Project Owner/maintainer</string>
+    <string name="elim_dialog">Follow Eliminater74</string>
+    <!-- possible profiles -->
+    <string name="gplus">Google+</string>
+    <string name="play_store">Play store</string>
+    <string name="twitter">Twitter</string>
+    <string name="xda">XDA-Developers</string>
 
     <string name="substratum_title">Substratum</string>
 

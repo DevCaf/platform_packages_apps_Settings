@@ -20,6 +20,8 @@
 
         <!-- Nebula Logo Header -->
         <PreferenceScreen android:key="ic_settings_nebula"
+            android:enabled="false"
+            android:shouldDisableView="false"
             android:layout="@layout/ic_settings_nebula" />
 
         <!-- Changelog -->
@@ -27,6 +29,13 @@
             android:title="@string/changelog_title"
             android:summary="@string/changelog_summary"
             android:fragment="com.android.settings.nebula.Changelog" />
+
+        <!-- Nebula About -->
+        <PreferenceScreen
+            android:key="about_nebula"
+            android:fragment="com.android.settings.nebula.About"
+            android:title="@string/nebula_about"
+            android:summary="@string/nebula_about_summary" />
 
         <!-- Device status - launches activity -->
         <PreferenceScreen android:key="status_info"
