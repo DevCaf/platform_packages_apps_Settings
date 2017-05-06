@@ -311,8 +311,6 @@ public class ButtonsSettings extends SettingsPreferenceFragment implements
     private String getSystemPreferenceString(Preference preference) {
         if (preference == null) {
             return EMPTY_STRING;
-        } else if (preference == mNavigationBar) {
-            return Settings.System.NAVIGATION_BAR_ENABLED;
         } else if (preference == mButtonBrightness) {
             return Settings.System.BUTTON_BRIGHTNESS_ENABLED;
         } else if (preference == mHomeLongPressAction) {
@@ -354,15 +352,8 @@ public class ButtonsSettings extends SettingsPreferenceFragment implements
         final boolean hasAppSwitch = (mDeviceHardwareKeys & KEY_MASK_APP_SWITCH) != 0;
         final boolean hasCamera = (mDeviceHardwareKeys & KEY_MASK_CAMERA) != 0;
 
-        final boolean navigationBarEnabled = Settings.System.getIntForUser(resolver,
-                Settings.System.NAVIGATION_BAR_ENABLED, 0, UserHandle.USER_CURRENT) != 0;
-
         final boolean buttonBrightnessEnabled = Settings.System.getIntForUser(resolver,
                 Settings.System.BUTTON_BRIGHTNESS_ENABLED, 1, UserHandle.USER_CURRENT) != 0;
-
-        if (mNavigationBar != null) {
-            mNavigationBar.setChecked(navigationBarEnabled);
-        }
 
         if (mButtonBrightness != null) {
             mButtonBrightness.setChecked(buttonBrightnessEnabled);
@@ -387,42 +378,6 @@ public class ButtonsSettings extends SettingsPreferenceFragment implements
 
         final PreferenceCategory cameraCategory =
                 (PreferenceCategory) prefScreen.findPreference(KEY_CATEGORY_CAMERA);
-
-        if (mDeviceHardwareKeys != 0 && mButtonBrightness != null) {
-            mButtonBrightness.setEnabled(!navigationBarEnabled);
-        } else if (mDeviceHardwareKeys == 0 && mButtonBrightness != null) {
-            prefScreen.removePreference(mButtonBrightness);
-        }
-
-        if (hasHome && homeCategory != null) {
-            homeCategory.setEnabled(!navigationBarEnabled);
-        } else if (!hasHome && homeCategory != null) {
-            prefScreen.removePreference(homeCategory);
-        }
-
-        if (hasBack && backCategory != null) {
-            backCategory.setEnabled(!navigationBarEnabled);
-        } else if (!hasBack && backCategory != null) {
-            prefScreen.removePreference(backCategory);
-        }
-
-        if (hasMenu && menuCategory != null) {
-            menuCategory.setEnabled(!navigationBarEnabled);
-        } else if (!hasMenu && menuCategory != null) {
-            prefScreen.removePreference(menuCategory);
-        }
-
-        if (hasAssist && assistCategory != null) {
-            assistCategory.setEnabled(!navigationBarEnabled);
-        } else if (!hasAssist && assistCategory != null) {
-            prefScreen.removePreference(assistCategory);
-        }
-
-        if (hasAppSwitch && appSwitchCategory != null) {
-            appSwitchCategory.setEnabled(!navigationBarEnabled);
-        } else if (!hasAppSwitch && appSwitchCategory != null) {
-            prefScreen.removePreference(appSwitchCategory);
-        }
 
         if (hasCamera && cameraCategory != null) {
             cameraCategory.setEnabled(true /*!navigationBarEnabled*/);
