@@ -37,7 +37,7 @@ public class Changelog extends SettingsPreferenceFragment {
 
     @Override
     protected int getMetricsCategory() {
-        return MetricsEvent.PIXELDUST;
+        return MetricsEvent.NEBULA;
     }
 
     private static final String CHANGELOG_PATH = "/system/etc/Changelog.txt";
