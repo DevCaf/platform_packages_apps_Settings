@@ -117,8 +117,9 @@
     <string name="nebula_donate">Donate to support development</string>
     
     <!-- developer/contributors -->
-    <string name="lead_dev">Lead developer</string>
-    <string name="contributors">Team members</string>
+    <string name="lead_dev">Lead Developer</string>
+    <string name="contributors">Team Members</string>
+    <string name="testers">Team Testers</string>
     
     <!-- eliminater74 -->
     <string name="elim">Eliminater74</string>
