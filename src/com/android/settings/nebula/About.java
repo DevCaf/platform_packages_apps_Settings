@@ -43,7 +43,7 @@ public class About extends SettingsPreferenceFragment {
             builder.setTitle(R.string.update_dialog);
             builder.setItems(R.array.update_entries, new DialogInterface.OnClickListener() {
                 public void onClick(DialogInterface dialog, int which) {
-                    String [] notificationValues = {"about:blank"};
+                    String [] notificationValues = {"https://forum.xda-developers.com/htc-10/development/rom-aosnp-android-source-nebula-project-t3599095"};
                     Intent link = new Intent(Intent.ACTION_VIEW);
                     String item = notificationValues[which];
                     link.setData(Uri.parse(item));
@@ -59,7 +59,7 @@ public class About extends SettingsPreferenceFragment {
             builder.setTitle(R.string.social_dialog);
             builder.setItems(R.array.social_entries, new DialogInterface.OnClickListener() {
                 public void onClick(DialogInterface dialog, int which) {
-                    String [] socialValues = {"about:blank",
+                    String [] socialValues = {"https://plus.google.com/communities/112250185941758695492",
                         "about:blank"};
                     Intent link = new Intent(Intent.ACTION_VIEW);
                     String item = socialValues[which];
