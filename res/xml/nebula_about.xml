@@ -78,6 +78,12 @@
             android:icon="@drawable/ic_ssojyeti2"
             android:title="@string/ssojyeti2"
             android:summary="@string/ssojyeti2_sum"/>
+	
+	<Preference
+            android:key="prsterero"
+            android:icon="@drawable/ic_prstorero"
+            android:title="@string/prsterero"
+            android:summary="@string/prsterero_sum"/>    	    
     </PreferenceCategory>
 
     <!--PreferenceCategory

@@ -130,6 +130,11 @@
     <string name="ssojyeti2">ssojyeti2</string>
     <string name="ssojyeti2_sum">GFX Contributor</string>
     <string name="ssojyeti2_dialog">Follow ssojyeti2</string>
+    
+    <!-- prsterero -->
+    <string name="prsterero">prsterero</string>
+    <string name="prsterero_sum">Contributor</string>
+    <string name="prsterero_dialog">Follow prsterero</string>
 
     <!-- possible profiles -->
     <string name="gplus">Google+</string>

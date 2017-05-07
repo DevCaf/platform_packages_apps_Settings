@@ -59,6 +59,11 @@
     <string-array name="ssojyeti2_entries">
         <item>@string/xda</item>
     </string-array>
+    
+    <!-- prsterero profiles -->
+    <string-array name="prsterero_entries">
+        <item>@string/xda</item>
+    </string-array>
 
     <!-- Names of categories of app ops tabs -->
     <string-array name="app_ops_categories_nitrogen" translatable="false">

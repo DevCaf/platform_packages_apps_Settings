@@ -104,6 +104,23 @@ public class About extends SettingsPreferenceFragment {
                 }
             });
             builder.show();
+		} else if (preference.getKey().equals("prsterero")) {
+            AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+            builder.setTitle(R.string.prsterero_dialog);
+            builder.setItems(R.array.prsterero_entries, new DialogInterface.OnClickListener() {
+                public void onClick(DialogInterface dialog, int which) {
+                    String [] prstereroValues = {
+                        "https://forum.xda-developers.com/member.php?u=4255135"};
+                    Intent link = new Intent(Intent.ACTION_VIEW);
+                    String item = prstereroValues[which];
+                    link.setData(Uri.parse(item));
+                    try {
+                        startActivity(link);
+                    } catch (android.content.ActivityNotFoundException e) {
+                    }
+                }
+            });
+            builder.show();
         }
         return super.onPreferenceTreeClick(preference);
     }
