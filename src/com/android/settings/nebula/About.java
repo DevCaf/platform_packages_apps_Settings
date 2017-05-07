@@ -87,6 +87,23 @@ public class About extends SettingsPreferenceFragment {
                 }
             });
             builder.show();
+        } else if (preference.getKey().equals("ssojyeti2")) {
+            AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+            builder.setTitle(R.string.ssojyeti2_dialog);
+            builder.setItems(R.array.ssojyeti2_entries, new DialogInterface.OnClickListener() {
+                public void onClick(DialogInterface dialog, int which) {
+                    String [] ssojyeti2Values = {
+                        "https://forum.xda-developers.com/member.php?u=3570510"};
+                    Intent link = new Intent(Intent.ACTION_VIEW);
+                    String item = ssojyeti2Values[which];
+                    link.setData(Uri.parse(item));
+                    try {
+                        startActivity(link);
+                    } catch (android.content.ActivityNotFoundException e) {
+                    }
+                }
+            });
+            builder.show();
         }
         return super.onPreferenceTreeClick(preference);
     }

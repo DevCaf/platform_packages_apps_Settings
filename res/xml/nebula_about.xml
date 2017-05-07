@@ -69,6 +69,17 @@
     </PreferenceCategory>
 
     <!-- Contributors -->
+    <PreferenceCategory
+        android:key="contributors"
+        android:title="@string/contributors">
+
+        <Preference
+            android:key="ssojyeti2"
+            android:icon="@drawable/ic_ssojyeti2"
+            android:title="@string/ssojyeti2"
+            android:summary="@string/ssojyeti2_sum"/>
+    </PreferenceCategory>
+
     <!--PreferenceCategory
         android:key="contributors"
         android:title="@string/contributors">

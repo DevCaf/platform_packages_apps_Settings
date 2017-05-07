@@ -117,14 +117,19 @@
     <string name="nebula_donate">Donate to support development</string>
     
     <!-- developer/contributors -->
-    <string name="lead_dev">Lead Developer</string>
+    <string name="lead_dev">Lead developer</string>
     <string name="contributors">Team members</string>
     
     <!-- eliminater74 -->
     <string name="elim">Eliminater74</string>
     <string name="elim_sum">Nebula Project Owner/maintainer</string>
     <string name="elim_dialog">Follow Eliminater74</string>
-    
+
+    <!-- ssojyeti2 -->
+    <string name="ssojyeti2">ssojyeti2</string>
+    <string name="ssojyeti2_sum">GFX Contributor</string>
+    <string name="ssojyeti2_dialog">Follow ssojyeti2</string>
+
     <!-- possible profiles -->
     <string name="gplus">Google+</string>
     <string name="play_store">Play store</string>
