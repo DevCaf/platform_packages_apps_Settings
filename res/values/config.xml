@@ -131,4 +131,8 @@
 
     <!-- Config to enable/disable hotspot2 for RJIL-->
     <bool name="config_wifi_hotspot2_enabled_Rel1">false</bool>
+
+    <bool name="usb_tethering_show_alert_for_no_sim_card">false</bool>
+
+    <bool name="usb_tethering_show_alert_for_first_use">false</bool>
 </resources>
